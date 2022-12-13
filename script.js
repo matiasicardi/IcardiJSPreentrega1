@@ -1,36 +1,39 @@
-
+let opciones = ["piedra", "papel", "tijera"]
+let jugador = 0
 let victorias = 0
 let derrotas = 0
+
+function aleatorio(min, max){
+    return Math.floor(Math.random()*(max-min+1)+1)
+}
+
+function eleccion (jugada){
+    let resultado = ""
+    if(jugada == 1){
+        resultado = opciones[0] + "🥌"
+    }else if(jugada == 2){
+        resultado = opciones[1] + "🧻"
+    }else if(jugada == 3){
+        resultado = opciones[2] + "✂"
+    }else{
+        resultado ="MAL MONITO 🙊🙉🙈, espero tengas muchas fichas."
+    } 
+    return resultado
+}
+
 
 while (victorias < 3 && derrotas < 3) {
     
 //JUGADOR
-let jugador = 0
-jugador = prompt("Por favor elige: 1 para piedra, 2 para papel y 3 para tijera")
-
-if(jugador == 1){
-    alert("Elegiste 🥌")
-}else if(jugador == 2){
-    alert("Elegiste 🧻")
-}else if(jugador == 3){
-    alert("Elegiste ✂")
-}else{
-alert("De 1 a 3 MONITO 🙊🙉🙈, espero tengas muchas fichas.")
-}
+    
+jugador = prompt("Por favor elige: 1 para Piedra, 2 para Papel y 3 para Tijera")
+    
 
 // PC
-let min = 1
-let max = 3
-numeroAleatorio = Math.floor(Math.random()*(max-min+1)+1)
-let pc = numeroAleatorio
+let pc = aleatorio(1, 3)
 
-if(pc == 1){
-    alert("PC elige 🥌")
-}else if(pc == 2){
-    alert("PC elige 🧻")
-}else if(pc == 3){
-    alert("PC elige ✂")
-}
+alert("Elegiste "+ eleccion(jugador))
+alert("PC elegió "+ eleccion(pc))
 
 //COMBATE
 
@@ -45,3 +48,5 @@ if(jugador == pc){
 }
 }
 alert("GAME OVER, INSERT COIN")
+ 
+
