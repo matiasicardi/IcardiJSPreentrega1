@@ -41,3 +41,44 @@ h3{
 #boton:hover{
     scale: 1.5;
 }
+
+@media screen and (max-width: 767px){
+    body{
+        margin-top: 15px;
+    }
+    
+    body{
+        background-color: red;
+        text-align: center;
+        margin: 35px;
+        font-family: 'Seymour One', sans-serif;
+        color: rgb(254, 221, 0);
+    }
+    
+    h1{
+        margin: 35px;
+        font-size: 45px;
+    }
+    
+    h2, h3, p, button{
+        margin: 25px;
+    }
+    
+    h3{
+        font-size: 35px;
+    }
+    
+    #boton{
+        background-color: gold;
+        height: 35px;
+        width: 100px;
+        border-radius: 5px;
+        border-color: transparent;
+        font-family: 'Seymour One', sans-serif;
+    }
+    
+    #boton:hover{
+        scale: 1.5;
+    }
+
+}
