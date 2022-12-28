@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin-top: 15px;
+}
+
+body{
+    background-color: red;
+    text-align: center;
+    margin: 35px;
+    font-family: 'Seymour One', sans-serif;
+    color: rgb(254, 221, 0);
+}
+
+h1{
+    margin: 55px;
+    font-size: 65px;
+}
+
+h2, h3, p, button{
+    margin: 45px;
+}
+
+h3{
+    font-size: 45px;
+}
+
+#boton{
+    background-color: gold;
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    border-color: transparent;
+    font-family: 'Seymour One', sans-serif;
+}
+
+#boton:hover{
+    scale: 1.5;
+}
