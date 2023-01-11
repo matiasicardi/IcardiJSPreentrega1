@@ -1,14 +1,10 @@
 
 function aJugar(){
     
-    let opciones = ["piedra", "papel", "tijera"]
+    let opciones = ["Piedra", "Papel", "Tijera"]
     let victorias = 0
     let derrotas = 0
-    
-    function aleatorio(min, max){
-        return Math.floor(Math.random()*(max-min+1)+1)
-    }
-    
+
     function eleccion (jugada){
         let resultado = ""
         if(jugada == 1){
@@ -21,6 +17,10 @@ function aJugar(){
             resultado ="MAL MONITO 🙊🙉🙈, espero tengas muchas fichas."
         } 
         return resultado
+    }
+    
+    function aleatorio(min, max){
+        return Math.floor(Math.random()*(max-min+1)+1)
     }
     
     function batalla(jugador, pc){
@@ -36,27 +36,27 @@ function aJugar(){
     }
     
     
-    while (victorias < 3 && derrotas < 3) {
+    while (victorias < 3 && derrotas < 3){
         
     //JUGADOR
         
-    jugador = prompt("Por favor elige: 1 para Piedra, 2 para Papel y 3 para Tijera")
+    jugador = prompt("Por favor elige: 1 para 🥌, 2 para 🧻 y 3 para ✂")
         
     
     // PC
     let pc = aleatorio(1, 3)
     
-    alert("Elegiste "+ eleccion(jugador))
-    alert("PC elegió "+ eleccion(pc))
+    alert ("Elegiste "+ eleccion(jugador))
+    alert ("PC elegió "+ eleccion(pc))
     
     //COMBATE
     
     let combate = batalla(jugador, pc)
     
     if(derrotas === 3){
-        alert("GAME OVER, INSERT COIN")  
+        Swal.fire("GAME OVER, INSERT COIN")  
       } else if(victorias === 3){
-        alert(`Felicitaciones!!. Sos el campeón mundial de "Piedra, Papel o Tijera "`)
+        Swal.fire("Felicitaciones, ganaste")
       }
     }
 }

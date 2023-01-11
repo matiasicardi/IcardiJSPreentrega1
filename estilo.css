@@ -5,24 +5,19 @@
 }
 
 body{
-    margin-top: 15px;
-}
-
-body{
-    background-color: red;
+    background: red;
     text-align: center;
-    margin: 35px;
     font-family: 'Seymour One', sans-serif;
     color: rgb(254, 221, 0);
 }
 
 h1{
-    margin: 55px;
+    margin-top: 140px;
     font-size: 65px;
 }
 
 h2, h3, p, button{
-    margin: 45px;
+    margin-top: 65px;
 }
 
 h3{
@@ -43,25 +38,21 @@ h3{
 }
 
 @media screen and (max-width: 767px){
-    body{
-        margin-top: 15px;
-    }
     
     body{
-        background-color: red;
+        background: red;
         text-align: center;
-        margin: 35px;
         font-family: 'Seymour One', sans-serif;
         color: rgb(254, 221, 0);
     }
     
     h1{
-        margin: 35px;
-        font-size: 45px;
+        margin-top: 120px;
+        font-size: 50px;
     }
     
     h2, h3, p, button{
-        margin: 25px;
+        margin-top: 55px;
     }
     
     h3{
@@ -78,7 +69,6 @@ h3{
     }
     
     #boton:hover{
-        scale: 1.5;
+        scale: 1.2;
     }
-
 }
